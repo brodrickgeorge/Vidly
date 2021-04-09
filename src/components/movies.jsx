@@ -13,11 +13,10 @@ class Movies extends Component {
 
   render() {
     const { length: count } = this.state.movies;
-
     if (count === 0) return <p>There are no movies in the database.</p>;
     return (
       <React.Fragment>
-        <p>Showing {count} movies in the database. </p>
+        <p>Showing {count} movies in the database.</p>
         <table className="table">
           <thead>
             <tr>
@@ -37,8 +36,8 @@ class Movies extends Component {
                 <td>{movie.dailyRentalRate}</td>
                 <td>
                   <button
-                    className="btn btn-danger btn-sm"
                     onClick={() => this.handleDelete(movie)}
+                    className="btn btn-danger btn-sm"
                   >
                     Delete
                   </button>
